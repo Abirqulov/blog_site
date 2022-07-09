@@ -31,7 +31,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 APPS = [
-    'account'
+    'account',
+    'apps.myapp'
 
 ]
 INSTALLED_APPS = [
