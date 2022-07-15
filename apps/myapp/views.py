@@ -26,10 +26,10 @@ def contact_page(request):
 
 def contact(request):
     if request.method == "POST":
-        name = request.POST['name']
-        phone = request.POST['phone']
-        email = request.POST['email']
-        message = request.POST['message']
+        name = request.POST["name"]
+        phone = request.POST["phone"]
+        email = request.POST["email"]
+        message = request.POST["message"]
 
         contact_post = Contact(name=name, phone=phone, email=email, message=message)
         contact_post.save()
