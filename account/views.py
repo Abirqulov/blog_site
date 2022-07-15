@@ -7,7 +7,7 @@ from django.urls import reverse
 from django.contrib import messages
 
 from .forms import CreateUserForm
-from .models import UserAccount
+from .models import User
 
 
 def register_page(request):

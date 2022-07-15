@@ -29,6 +29,7 @@ ALLOWED_HOSTS = ['http'
                  's://blogsite-sulton.herokuapp.com/', '127.0.0.1']
 
 
+AUTH_USER_MODEL = 'account.User'
 # Application definition
 
 APPS = [
