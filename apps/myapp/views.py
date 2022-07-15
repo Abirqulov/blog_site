@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import Contact
 from django.http import HttpResponse
 # Create your views here.
 
@@ -22,3 +23,15 @@ def shop_page(request):
 def contact_page(request):
     return render(request, 'contact.html')
 
+
+def contact(request):
+    if request.method == "POST":
+        name = request.POST['name']
+        phone = request.POST['phone']
+        email = request.POST['email']
+        message = request.POST['message']
+
+        contact_post = Contact(name=name, phone=phone, email=email, message=message)
+        contact_post.save()
+
+        return render(request, 'contact.html')

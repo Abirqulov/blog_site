@@ -101,21 +101,24 @@
                <div class="col-md-6">
                   <form id="request" class="main_form">
                      <div class="row">
-                        <div class="col-md-12 ">
-                           <h3>Contact Us</h3>
-                        </div>
-                        <div class="col-md-12 ">
-                           <input class="contactus" placeholder="Name" type="type" name="Name"> 
-                        </div>
-                        <div class="col-md-12">
-                           <input class="contactus" placeholder="Phone Number" type="type" name="Phone Number"> 
-                        </div>
-                        <div class="col-md-12">
-                           <input class="contactus" placeholder="Email" type="type" name="Email">                          
-                        </div>
-                        <div class="col-md-12">
-                           <input class="contactusmess" placeholder="Message" type="type" Message="Name">
-                        </div>
+                        <form action="#" method="post">
+                           {% crf_token %}
+                           <div class="col-md-12 ">
+                              <h3>Contact Us</h3>
+                           </div>
+                           <div class="col-md-12 ">
+                              <input class="contactus" placeholder="Name" type="text" name="name" id="name">
+                           </div>
+                           <div class="col-md-12">
+                              <input class="contactus" placeholder="Phone Number" type="number" name="Phone" id="phone">
+                           </div>
+                           <div class="col-md-12">
+                              <input class="contactus" placeholder="Email" type="email" name="email" id="email">
+                           </div>
+                           <div class="col-md-12">
+                              <input class="contactusmess" placeholder="Message" type="text" name="message" id="message">
+                           </div>
+                        </form>
                         <div class="col-md-12">
                            <button class="send_btn">Send</button>
                         </div>
